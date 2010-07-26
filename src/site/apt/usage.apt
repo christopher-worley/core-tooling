@@ -1,0 +1,6 @@
+Usage
+
+* Logging
+
+	Classes in core.tooling.logging.* provide wrappers for the log4j api.  The Logger class provides log methods work like the MessageFormatter class, to help avoid concatenation of strings in code.
+	

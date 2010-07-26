@@ -1,0 +1,19 @@
+<project name="Core Tooling">
+	<bannerLeft>
+		<name>Core Tooling</name>
+		<src>logo.gif</src>
+		<href>www.coreinformationsolutions.com</href>
+	</bannerLeft>
+	
+	<body>
+		<links>
+			<item name="Core Information Solutions LLC" href="http://www.coreinformationsolutions.com"/>
+		</links>
+
+		<menu name="Core Tooling">
+			<item name="Overview" href="index.html"/>
+			<item name="Usage" href="usage.html"/>
+			<item name="Dependencies" href="dependencies.html"/>
+		</menu>
+	</body>
+</project>
