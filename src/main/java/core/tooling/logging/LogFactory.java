@@ -19,8 +19,6 @@
  */
 package core.tooling.logging;
 
-import java.util.HashMap;
-import java.util.Map;
 
 /**
  * LogFactory creates loggers and keeps instances of

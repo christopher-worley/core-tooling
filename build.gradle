@@ -1,0 +1,60 @@
+
+/*
+
+ Core Tooling
+
+*/
+
+apply plugin: 'eclipse'
+apply plugin: 'java'
+apply plugin: 'maven'
+
+sourceCompatibility = 1.6
+version = '0.0.1'
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Core Tooling', 'Implementation-Version': version
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'junit', name: 'junit', version: '4.10'
+    compile group: 'log4j', name: 'log4j', version: '1.2.14'
+    compile group: 'commons-logging', name: 'commons-logging', version: '1.1.1'
+   
+}
+
+
+/*
+ Maven Config
+*/
+
+configure(install.repositories.mavenInstaller) {
+    pom.project {
+        groupId 'com.coreinformationsolutions'
+        artifactId 'core-tooling'
+        inceptionYear '2012'
+        packaging 'jar'
+        // TODO: license 
+    }
+}
+
+task sourcesJar(type: Jar, dependsOn:classes) {
+     classifier = 'sources'
+     from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn:javadoc) {
+     classifier = 'javadoc'
+     from javadoc.destinationDir
+}
+
+artifacts {
+     archives sourcesJar
+     archives javadocJar
+}
+
